@@ -1,286 +1,165 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f1e8;
+    color: #333;
+    line-height: 1.6;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #2b251d;
-  background-color: #f7efdf;
-}
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-h1,
-h2 {
-  margin: 0 0 24px;
-  font-family: Georgia, serif;
-  font-weight: normal;
-  line-height: 0.95;
-}
-
-h1 {
-  font-size: 8vw;
-}
-
-h2 {
-  font-size: 5vw;
-}
-
-p {
-  line-height: 1.6;
-}
-
-.label {
-  margin-bottom: 20px;
-  color: #b85f3e;
-  font-size: 13px;
-  letter-spacing: 3px;
-}
-
-.light {
-  color: #f7efdf;
-}
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 8%;
-  text-align: center;
-  background-color: #f2c15d;
+    min-height: 100vh;
+
+    background-image: url("images/kapi1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
 }
 
-.hero-content {
-  max-width: 900px;
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 30px;
+    border-radius: 15px;
 }
 
-.intro {
-  max-width: 650px;
-  margin: 30px auto;
-  color: #6f6559;
-  font-size: 20px;
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
 }
 
-.scroll {
-  margin-top: 50px;
-  letter-spacing: 3px;
+.hero p {
+    font-size: 1.3rem;
 }
 
-.section {
-  padding: 100px 8%;
+
+
+.story {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-.row {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 60px;
+.story .text,
+.story .image {
+    flex: 1;
 }
 
-.row > * {
-  flex: 1;
+.story img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
 }
 
-.text {
-  max-width: 520px;
+.story h2 {
+    font-size: 2rem;
+    margin-top: 0;
 }
 
-.text > p {
-  color: #6f6559;
-}
 
-.moments {
-  margin-top: 30px;
-  font-size: 20px;
-}
-
-.photo {
-  margin: 0;
-}
-
-.photo img {
-  height: 600px;
-  border-radius: 30px;
-  transition: transform 0.4s;
-}
-
-.photo img:hover {
-  transform: scale(1.02);
-}
-
-.arch img {
-  border-radius: 45% 45% 30px 30px;
-}
-
-.parallax {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 80px 8%;
-
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("images/kapi-baby.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.parallax-text {
-  max-width: 560px;
-  padding: 30px;
-  border-radius: 20px;
-  background-color: rgba(247, 239, 223, 0.92);
-}
-
-.section-title {
-  max-width: 900px;
-  margin: 0 auto 60px;
-  text-align: center;
-}
-
-.comparison {
-  align-items: flex-start;
-}
-
-figcaption {
-  padding-top: 18px;
-}
-
-figcaption strong {
-  color: #b85f3e;
-  letter-spacing: 2px;
-}
-
-figcaption p {
-  color: #6f6559;
-}
-
-.orange {
-  color: white;
-  background-color: #b85f3e;
-}
-
-.orange .text > p {
-  color: #f7efdf;
-}
-
-.finale {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  color: white;
-}
-
-.finale > img,
-.overlay {
-  position: absolute;
-  inset: 0;
-}
-
-.finale > img {
-  z-index: 0;
-}
-
-.overlay {
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-.finale-text {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-
-.finale-text p:last-child {
-  max-width: 550px;
-}
-
-.ending {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 8%;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 14vw;
-  }
-
-  h2 {
-    font-size: 11vw;
-  }
-
-  .section {
-    padding: 70px 24px;
-  }
-
-  .row {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .photo img {
-    height: 450px;
-  }
-
-  .parallax {
-    min-height: 85vh;
-    padding: 24px;
-    background-attachment: scroll;
-  }
-
-  .parallax-text {
-    padding: 24px;
-  }
-
-  .finale-text {
-    margin: 0 24px;
-  }
-}
+/* FIRST KAPI IMAGE */
 
 #kapi {
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 #kapi:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+
+#kapi-play {
+    transition: transform 0.3s ease;
+}
+
 
 
 .jump {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
 }
+
+
+
+.parallax {
+    min-height: 60vh;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.parallax-one {
+    background-image: url("images/kapi2.jpg");
+}
+
+.parallax-two {
+    background-image: url("images/kapi3.jpg");
+}
+
+.parallax-three {
+    background-image: url("images/kapi4.jpg");
+}
+
+.parallax-four {
+    background-image: url("images/kapi5.jpg");
+}
+
+.parallax-text {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 35px;
+    border-radius: 12px;
+}
+
+.parallax-text h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
 
 
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: 0.8s;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
 .reveal.show {
@@ -289,6 +168,102 @@ figcaption p {
 }
 
 
-.heart {
-    font-size: 40px;
+
+
+.ending {
+    text-align: center;
+    padding: 100px 30px;
+    background-color: #fff7ee;
+}
+
+.ending h2 {
+    font-size: 2.3rem;
+}
+
+#ending-message {
+    font-size: 1.1rem;
+}
+
+
+/* BUTTON */
+
+#love-button {
+    margin-top: 20px;
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 1rem;
+
+    background-color: #333;
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#love-button:hover {
+    transform: scale(1.05);
+}
+
+#love-button:active {
+    transform: scale(0.95);
+}
+
+#love-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .story {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 25px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        min-height: 45vh;
+    }
+
+    .parallax-text h2 {
+        font-size: 2rem;
+    }
+
+    .ending {
+        padding: 70px 20px;
+    }
+
 }
